@@ -14,15 +14,20 @@ class MessageThreadsTableViewController: UITableViewController {
     
     let messageThreadController = MessageThreadController()
     @IBOutlet weak var threadTitleTextField: UITextField!
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        messageThreadController.fetchMessageThreads {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        messageThreadController.fetchMessageThreads { 
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+       
     }
     
     // MARK: - Actions

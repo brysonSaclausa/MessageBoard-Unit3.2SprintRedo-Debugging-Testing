@@ -81,4 +81,6 @@ Bug 3. Send button non responsive
 
 Bug4. Fetch Message thread no decode
     - 
+    
+Bug 5:  Copy of message threads when reload table view
 
