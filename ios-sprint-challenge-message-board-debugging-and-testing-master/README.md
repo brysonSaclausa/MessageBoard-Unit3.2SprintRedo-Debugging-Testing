@@ -73,11 +73,12 @@ The requirements for this project are as follows:
 
 BUGS.md
 Bug 1. tableview not populating
--added .resume to the datatasks and moved .reloadData to the  main queue
+    -added .resume to the datatasks and moved .reloadData to the  main queue
 
 Bug 2. Thread title does not change on thread detail view
 
 Bug 3. Send button non responsive
 
-Bug4. Message thread doesnt persist
+Bug4. Fetch Message thread no decode
+    - 
 
