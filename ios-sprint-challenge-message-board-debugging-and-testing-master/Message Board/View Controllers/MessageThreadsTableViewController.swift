@@ -58,7 +58,7 @@ class MessageThreadsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ViewMesageThread" {
+        if segue.identifier == "ViewMessageThread" { //Bug 2
             guard let indexPath = tableView.indexPathForSelectedRow,
                 let destinationVC = segue.destination as? MessageThreadDetailTableViewController else { return }
             
@@ -67,3 +67,4 @@ class MessageThreadsTableViewController: UITableViewController {
         }
     }
 }
+
