@@ -11,7 +11,6 @@ import Foundation
 class MessageThreadController {
     
     static let baseURL = URL(string: "https://iosbrsmessageboardapp-default-rtdb.firebaseio.com/")!
-
     var messageThreads: [MessageThread] = []
     
     func fetchMessageThreads(completion: @escaping () -> Void) {
@@ -34,8 +33,9 @@ class MessageThreadController {
             do {
                 let threadArray = try JSONDecoder().decode([String: MessageThread].self, from: data)
                 for threads in threadArray {
-                    self.messageThreads.append(threads.value) //Bug 4
+                    self.messageThreads.append(threads.value)
                 }
+                
             } catch {
                 self.messageThreads = []
                 NSLog("Error decoding message threads from JSON data: \(error)")
@@ -73,7 +73,6 @@ class MessageThreadController {
             self.messageThreads.append(thread)
             completion()
         }.resume()
-        
     }
     
     func createMessage(in messageThread: MessageThread, withText text: String, sender: String, completion: @escaping () -> Void) {

@@ -87,7 +87,7 @@ Bug4. Fetch Message thread no decode
 Bug 5:  Copy of message threads when reload table view
     - FIXED added a view did load
     
-Bug 6: When adding a message it does not show in table view unless you navigate back 
+Bug 6: When SENDing a message it does not show in table view unless you navigate back 
     -
 Bug 7: Cancel message Button
     -

@@ -21,6 +21,7 @@ class MessageDetailViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func sendMessage(_ sender: Any) {
@@ -33,7 +34,6 @@ class MessageDetailViewController: UIViewController {
         messageThreadController?.createMessage(in: messageThread, withText: messageText, sender: senderName, completion: {
             print("Message created!")
             DispatchQueue.main.async {
-                
                 self.dismiss(animated: true, completion: nil)
             }
         })
