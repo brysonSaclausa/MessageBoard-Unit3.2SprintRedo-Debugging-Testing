@@ -69,25 +69,3 @@ The requirements for this project are as follows:
         1. Write in a way that your Grandma or a 5-year old could understand
 3. Make the app remember who you are when posting messages (streamline the experience)
 4. Tweak the UI experience so that it feels more at home on iOS (e.g.: Dark mode with iOS13)
-
-
-BUGS.md
-Bug 1. tableview not populating
-    -FIXED added .resume to the datatasks and moved .reloadData to the  main queue
-
-Bug 2. Thread title does not change on thread detail view
-    -FIXED
-
-Bug 3. Send button non responsive
-    -FIXED- added message text properly
-
-Bug4. Fetch Message thread no decode
-    - FIXED TRY to decode from dictionary to extract values 
-    
-Bug 5:  Copy of message threads when reload table view
-    - FIXED added a view did load
-    
-Bug 6: When SENDing a message it does not show in table view unless you navigate back 
-    -
-Bug 7: Cancel message Button
-    -
