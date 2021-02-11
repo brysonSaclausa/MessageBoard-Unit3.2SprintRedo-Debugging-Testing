@@ -203,6 +203,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Rdr-Es-W84">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AYH-2O-8Ab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Myh-kZ-stt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="6vF-Sx-Zpv"/>
@@ -215,7 +216,6 @@
                         <segue destination="BoB-4p-ZG3" kind="relationship" relationship="rootViewController" id="MR5-rs-ZNr"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AYH-2O-8Ab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2319" y="-566"/>
         </scene>

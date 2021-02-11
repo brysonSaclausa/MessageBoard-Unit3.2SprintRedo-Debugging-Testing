@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class MessageThreadDetailTableViewController: UITableViewController {
     
     // MARK: - Properties
@@ -52,7 +54,19 @@ class MessageThreadDetailTableViewController: UITableViewController {
             
             destinationVC.messageThreadController = messageThreadController
             destinationVC.messageThread = messageThread
-            
+            destinationVC.messageDelegate = self
         }
     }
+}
+
+extension MessageThreadDetailTableViewController: MessageDetailControllerDelegate {
+    func reloadData() {
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
+    }
+    
+    
 }

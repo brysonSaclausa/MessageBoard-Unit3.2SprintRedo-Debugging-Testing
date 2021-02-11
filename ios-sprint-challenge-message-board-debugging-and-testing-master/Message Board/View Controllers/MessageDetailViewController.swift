@@ -8,15 +8,23 @@
 
 import UIKit
 
+protocol MessageDetailControllerDelegate {
+    func reloadData()
+}
+
 class MessageDetailViewController: UIViewController {
     
     // MARK: - Properties
     
+    var messageDelegate: MessageDetailControllerDelegate?
     var messageThreadController: MessageThreadController?
     var messageThread: MessageThread?
 
     @IBOutlet weak var senderNameTextField: UITextField!
     @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet weak var cancel: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
 
     // MARK: - Actions
     
@@ -34,6 +42,8 @@ class MessageDetailViewController: UIViewController {
         messageThreadController?.createMessage(in: messageThread, withText: messageText, sender: senderName, completion: {
             print("Message created!")
             DispatchQueue.main.async {
+                //create a delegate
+                self.messageDelegate?.reloadData()
                 self.dismiss(animated: true, completion: nil)
             }
         })
